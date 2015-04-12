@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sitio',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,7 +81,7 @@ DATABASES = {
         'NAME': 'kiipfonedb',
 	'USER': 'kiipfone',
 	'PASSWORD': 'kiipf0ne!base',
-	'HOST': 'localhost',
+	'HOST': 'wgcv.me',
 	'PORT': '',
     }
 }
@@ -105,4 +106,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    )
+MEDIA_ROOT = BASE_DIR + '/media/'
+TEMPLATE_DIRS = ( os.path.join(BASE_DIR, 'templates'), BASE_DIR,)
+LOGIN_URL = '/ingresar'
+LOGIN_REDIRECT_URL = "/"
