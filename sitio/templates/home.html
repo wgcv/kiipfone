@@ -1,0 +1,101 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>kiipfone</title>
+	<link rel="shortcut icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
+	<link rel="icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static "style/normalize.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "style/style.css" %}">
+		<!--[if lt IE 9]>
+  			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<nav>
+	<i class="fa fa-bars fa-2x  menuresponsive" id="menuresponsive"></i>
+		<img src="{% static "img/nanoLogo.png" %}">
+		<ul>
+			<a href="/"><li>Home</li></a>
+			<li>Nosotros</li>
+			<li>Solicitar</li>
+			<li>Accesorios</li>
+			<li>Contactanos</li>
+		</ul>
+		<i class="fa fa-user login" id="login"></i>
+		<div id="usuario">
+			Login
+			<div class="from">
+				<span class="entrada"><span class="usuarioicon"><i class="fa fa-user fa-fw"></i></span>
+				<input class="form-usario" type="text" placeholder="Usuario"></span>
+				<span class="entrada"><span class="usuarioicon"><i class="fa fa-lock fa-fw"></i></span>
+				<input class="form-usario" type="password" placeholder="Clave"></span>
+
+				<a href="#" class="boton">Registrarse</a><input type="submit" class="boton" value="Ingresar"> 
+				</div>
+
+
+
+</div>
+	</nav>
+<header>
+<h2>Reparamos tu smartphone</h2>
+<h1>Donde sea, cuando sea</h1>
+<p>Nullam mollis risus id pharetra ullamcorper. Donec in mauris vel nunc facilisis accumsan id et orci. </p>
+<div class="promosolicitar">
+<a href="#" class="hvr-buzz-out" id="reparar"><i class="fa fa-wrench"> </i> Reparar  </i></i></a>
+<img id="crashiphone" src="{% static "img/iphonecracked.png" %}" /></div>
+</header>
+
+<section class="marcas">
+<h2>Marcas</h2>
+<article class="marcas">
+	<img src="img/iphoneGris.png"/>
+	<img src="img/samsungGris.png"/>
+	<img src="img/sonyGris.png"/>
+	<img src="img/huaweiGris.png"/>
+	<img src="img/lgGris.png"/>
+
+</article>
+</section>
+
+<section class="hacemos">
+	<div class="informacion3">
+		<img src="http://lorempixel.com/150/150/"/>
+		<h3>Servicio</h3>
+		<p>Piezas originales con garantía y técnicos altamente cualificados.</p>
+		<a href="#">Conoce mas</a>
+	</div>
+	<div class="informacion3">
+		<img src="http://lorempixel.com/150/150/"/>
+		<h3>Facil y Rapido</h3>
+		<p>Reparación a domicilio u oficina al instante sin coste adicional. </p>
+		<a href="#">Conoce mas</a>
+	</div>
+	<div class="informacion3">
+		<img src="http://lorempixel.com/150/150/"/>
+		<h3>Pagos</h3>
+		<p>Repara tu dispositivo y paga en Efectivo, PayPal o Bitcoins.</p>
+		<a href="#">Conoce mas</a>
+	</div>
+</section>
+<hr/>	
+<section class="solicitar">
+	<h2>¿Necesitas arreglar tu célular?</h2>
+	<a href="#" class="hvr-buzz-out" id="reparar"><i class="fa fa-wrench"> </i> Solicitar  </i></i></a>
+</section>
+<footer>
+<p class="logofooter">
+	<img src="img/microLogo.png"/></p>
+	<p class="copyright">Copyright 2015 kiipfone Inc.</p>
+</footer>
+<script type="text/javascript" src="script/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="script/scripts.js"></script>
+<script type="text/javascript" src="script/animacioncrash.js"></script>
+</body>
+</html>
