@@ -7,7 +7,7 @@ function inicio () {
 
 		},
 		500, function() {
-			$("#crashiphone").attr("src","img/iphonenocracked.png");
+			$("#crashiphone").attr("src","/static/img/iphonenocracked.png");
 			$( "#crashiphone" ).animate({
 			opacity: 1,
 
@@ -21,7 +21,7 @@ function inicio () {
 
 	.mouseout(function() {
 
-		$("#crashiphone").attr("src","img/iphonecracked.png");
+		$("#crashiphone").attr("src","/static/img/iphonecracked.png");
 	});
 }
 
