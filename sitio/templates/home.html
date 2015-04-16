@@ -29,15 +29,21 @@
 		</ul>
 		<i class="fa fa-user login" id="login"></i>
 		<div id="usuario">
-			Login
-			<div class="from">
-				<span class="entrada"><span class="usuarioicon"><i class="fa fa-user fa-fw"></i></span>
-				<input class="form-usario" type="text" placeholder="Usuario"></span>
-				<span class="entrada"><span class="usuarioicon"><i class="fa fa-lock fa-fw"></i></span>
-				<input class="form-usario" type="password" placeholder="Clave"></span>
+			{% if user.is_authenticated %}
+    			<p>Bienvenido {{ user.username }}.</p>
+				<a href="{% url 'home' %}">Solicitudes</a><br>
+    			<p><a href="{% url 'home' %}">Cerrar Sesión</a></p>
+			{% else %}
+				Login
+				<div class="from">
+					<span class="entrada"><span class="usuarioicon"><i class="fa fa-user fa-fw"></i></span>
+					<input class="form-usario" type="text" placeholder="Usuario"></span>
+					<span class="entrada"><span class="usuarioicon"><i class="fa fa-lock fa-fw"></i></span>
+					<input class="form-usario" type="password" placeholder="Clave"></span>
 
-				<a href="#" class="boton">Registrarse</a><input type="submit" class="boton" value="Ingresar"> 
-				</div>
+					<a href="#" class="boton">Registrarse</a><input type="submit" class="boton" value="Ingresar"> 
+					</div>
+			{% endif %}
 
 
 
