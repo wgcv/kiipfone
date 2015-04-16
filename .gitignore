@@ -1,5 +1,6 @@
 nginx.conf
 kiipfone.sock
+settings.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
