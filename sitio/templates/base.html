@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>kiipfone</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static "style/normalize.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "style/style.css" %}">
+		<!--[if lt IE 9]>
+  			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	{% block css %}
+	{% endblock %}
+	<link rel="stylesheet" href="{% static "style/font-awesome.min.css" %}">
+
+</head>
+<body>
+	<nav>
+	<i class="fa fa-bars fa-2x  menuresponsive" id="menuresponsive"></i>
+		<img src="{% static "img/nanoLogo.png" %}">
+		<ul>
+			<a href="/"><li>Home</li></a>
+			<li>Nosotros</li>
+			<li>Solicitar</li>
+			<li>Accesorios</li>
+			<li>Contactanos</li>
+		</ul>
+		<i class="fa fa-user login" id="login"></i>
+		<div id="usuario">
+			{% if user.is_authenticated %}
+    			<p>Bienvenido {{ user.username }}.</p>
+				<a href="{% url 'home' %}">Solicitudes</a><br>
+    			<p><a href="{% url 'salir' %}">Cerrar Sesión</a></p>
+			{% else %}
+				Login
+				<div class="from">
+					<form method="post" action="{% url 'ingresar' %}">
+					{% csrf_token %}
+					<span class="entrada"><span class="usuarioicon"><i class="fa fa-user fa-fw"></i></span>
+					<input class="form-usario" name="username" type="text" placeholder="Usuario"></span>
+					<span class="entrada"><span class="usuarioicon"><i class="fa fa-lock fa-fw"></i></span>
+					<input class="form-usario" name="password" type="password" placeholder="Clave"></span>
+
+					<a href="{% url 'registrarse' %}" class="boton">Registrarse</a><input type="submit" class="boton" value="Ingresar">
+					</form>
+					</div>
+			{% endif %}
+
+
+
+</div>
+	</nav>
+<header>
+	{% block header %}
+	{% endblock %}
+</header>
+
+<section>
+	{% block content %}
+	{% endblock %}
+</section>
+<hr/>	
+<section class="solicitar">
+	<h2>¿Necesitas arreglar tu célular?</h2>
+	<a href="#" class="hvr-buzz-out" id="reparar"><i class="fa fa-wrench"> </i> Solicitar  </i></i></a>
+</section>
+<footer>
+<p class="logofooter">
+	<img src="{% static "img/microLogo.png" %}"/></p>
+	<div ="redessociales">
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-instagram"></i></a>
+		<a href="#"><i class="fa fa-google-plus"></i></a>
+	</div>
+	<p class="copyright">Copyright 2015 kiipfone Inc.</p>
+</footer>
+<script type="text/javascript" src="{% static "script/jquery-2.1.3.min.js" %}"></script>
+<script type="text/javascript" src="{% static "script/scripts.js" %}"></script>
+<script type="text/javascript" src="{% static "script/animacioncrash.js" %}"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61939092-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

@@ -5,4 +5,6 @@ from sitio import views
 
 urlpatterns = (
 	url(r'^$', 'sitio.views.home', name='home'),
+	url(r'^base/', 'sitio.views.base', name='base'),
+
     )
