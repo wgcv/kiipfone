@@ -6,6 +6,7 @@ urlpatterns = [
     # url(r'^$', 'kiipfone.views.home', name='home'),
     # url(r'^blog/', include('blog.urls'STATIC_URL = "/static/"
     url(r'^', include('sitio.urls')),
+    url(r'^', include('usuario.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
 ]

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+	<form method="post" action="" enctype="multipart/form-data">
+	<Br><br>
+	{% csrf_token %}
+	{{RegistrarUser.as_p}}
+	{{RegistrarseUsuario.as_p}}
+	<input type="submit">
+	</form>
+
+{% endblock %}
