@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% block content %}
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static "style/usuario.css" %}">
 
+{% endblock %}
+{% block content %}
+<section class="contenido">
+<h2>Regístrate</h2>
 	<form method="post" action="" enctype="multipart/form-data">
-	<Br><br>
 	{% csrf_token %}
 	{{RegistrarUser.as_p}}
 	{{RegistrarseUsuario.as_p}}
-	<input type="submit">
+	<input type="submit" class="boton" value="Registrarme">
 	</form>
-
+</section>
 {% endblock %}
