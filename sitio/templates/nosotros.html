@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static "style/nosotros.css" %}">
+
+{% endblock %}
+{% block content %}
+<img class="headerimg" src="http://lorempixel.com/1806/350/">
+<div class="contenido">
+<h1>Nosotros:</h1>
+<p>Kiipfone es un Servicio Técnico de reparación de smartphones y tablets, con tecnicos a domicilio, que da servicio a clientes de la ciudad de Guayaquil. Gracias a nuestra plataforma y a los mejores operadores logísticos nacionales realizamos envíos para que nuestros clientes obtengan sus productos y reparaciones de forma rápida, fácil y al mejor precio.</p>
+
+<p>Debido a que el tiempo y la seguridad  de nuestros clientes son importantes , www.Kiipfone.com tiene como objetivo solucionar tus problemas tecnologicos de la manera rapida y efectiva.</p>
+
+
+<p>Nos desplazamos dónde quieras y cuando quieras con nuestros Reparadores a Domicilio.
+Las principales marcas: Apple, Samsung, Sony, Nexus y LG.
+Siempre con piezas originales y 3 meses de garantía.</p>
+
+<p>Calidad, garantía, buena atención, entrega de pedidos urgente y los mejores precios son nuestros compromisos con todos nuestros clientes</p>
+</div>
+<div class="equipo">
+<div>
+	<div class="intengrantes">
+		<a href="https://twitter.com/joshuaenriquezz" target="_blank">
+			<img class="nosotrosimg" src="http://lorempixel.com/150/150/">
+			<p>Joshua Enriquez</p>
+			<p>CEO</p>
+		</a>
+	</div>
+	<div class="intengrantes">
+		<a href="https://twitter.com/wgcv" target="_blank">
+			<img class="nosotrosimg" src="http://lorempixel.com/150/150/">
+			<p>W. Gustavo Cevallos</p>
+			<p>CTEO</p>
+		</a>
+	</div>
+</div>
+{% endblock %}
