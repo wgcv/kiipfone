@@ -24,9 +24,9 @@
 	<i class="fa fa-bars fa-2x  menuresponsive" id="menuresponsive"></i>
 		<img src="{% static "img/nanoLogo.png" %}">
 		<ul>
-			<a href="/"><li>Home</li></a>
+			<a href="{% url 'home' %}"><li>Home</li></a>
 			<a href="{% url 'nosotros' %}"><li>Nosotros</li></a>
-			<li>Solicitar</li>
+			<a href="{% url 'contactanos' %}"><li>Solicitar</li></a>
 			<li>Accesorios</li>
 			<a href="{% url 'contactanos' %}"><li>Contactanos</li></a>
 		</ul>
@@ -67,7 +67,7 @@
 <hr/>	
 <section class="solicitar">
 	<h2>¿Necesitas arreglar tu célular?</h2>
-	<a href="#" class="hvr-buzz-out" id="reparar"><i class="fa fa-wrench"> </i> Solicitar  </i></i></a>
+	<a href="{% url 'contactanos' %}" class="hvr-buzz-out" id="reparar"><i class="fa fa-wrench"> </i> Solicitar  </i></i></a>
 </section>
 <footer>
 <p class="logofooter">

@@ -5,7 +5,7 @@
 <h1>Donde sea, cuando sea</h1>
 <p>Nullam mollis risus id pharetra ullamcorper. Donec in mauris vel nunc facilisis accumsan id et orci. </p>
 <div class="promosolicitar">
-<a href="#" class="hvr-buzz-out" id="reparar"><i class="fa fa-wrench"> </i> Reparar  </i></i></a>
+<a href="{% url 'contactanos' %}" class="hvr-buzz-out" id="reparar"><i class="fa fa-wrench"> </i> Reparar  </i></i></a>
 <img id="crashiphone" src="{% static "img/iphonecracked.png" %}" /></div>
 {% endblock %}
 {% block content %}
@@ -24,46 +24,20 @@
 
 <section class="hacemos">
 	<div class="informacion3">
-		<img src="http://lorempixel.com/150/150/"/>
+		<img src="{% static "img/ServicioIcono.png" %}"/>
 		<h3>Servicio</h3>
 		<p>Reparamos tu celular con garantía y técnicos altamente cualificados.</p>
 	</div>
 	<div class="informacion3">
-		<img src="http://lorempixel.com/150/150/"/>
+		<img src="{% static "img/TiempoIcono.png" %}"/>
 		<h3>Facil y Rapido</h3>
 		<p>A tu domicilio u oficina al instante sin coste adicional. </p>
 	</div>
 	<div class="informacion3">
-		<img src="http://lorempixel.com/150/150/"/>
+		<img src="{% static "img/PagoIcono.png" %}"/>
 		<h3>Pagos</h3>
 		<p>Aceptamos pagos en Efectivo, PayPal o Bitcoins.</p>
 	</div>
 </section>
 
 {% endblock %}
-<footer>
-<p class="logofooter">
-	<img src="{% static "img/microLogo.png" %}"/></p>
-	<div ="redessociales">
-		<a href="#"><i class="fa fa-facebook"></i></a>
-		<a href="#"><i class="fa fa-twitter"></i></a>
-		<a href="#"><i class="fa fa-instagram"></i></a>
-		<a href="#"><i class="fa fa-google-plus"></i></a>
-	</div>
-	<p class="copyright">Copyright 2015 kiipfone Inc.</p>
-</footer>
-<script type="text/javascript" src="{% static "script/jquery-2.1.3.min.js" %}"></script>
-<script type="text/javascript" src="{% static "script/scripts.js" %}"></script>
-<script type="text/javascript" src="{% static "script/animacioncrash.js" %}"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-61939092-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</body>
-</html>
