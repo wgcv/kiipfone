@@ -8,6 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{% static "style/normalize.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "style/style.css" %}">
+	<link rel="icon" href="{% static "img/favicon.ico" %}">
+	<link rel="apple-touch-icon-precomposed" href="{% static "img/favicon.ico" %}">
+
 		<!--[if lt IE 9]>
   			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -22,10 +25,10 @@
 		<img src="{% static "img/nanoLogo.png" %}">
 		<ul>
 			<a href="/"><li>Home</li></a>
-			<li>Nosotros</li>
+			<a href="{% url 'nosotros' %}"><li>Nosotros</li></a>
 			<li>Solicitar</li>
 			<li>Accesorios</li>
-			<li>Contactanos</li>
+			<a href="{% url 'contactanos' %}"><li>Contactanos</li></a>
 		</ul>
 		<i class="fa fa-user login" id="login"></i>
 		<div id="usuario">
@@ -70,10 +73,10 @@
 <p class="logofooter">
 	<img src="{% static "img/microLogo.png" %}"/></p>
 	<div class="redessociales">
-		<a href="#"><i class="fa fa-facebook"></i></a>
-		<a href="#"><i class="fa fa-twitter"></i></a>
-		<a href="#"><i class="fa fa-instagram"></i></a>
-		<a href="#"><i class="fa fa-google-plus"></i></a>
+		<a href="https://www.facebook.com/kiipfone" target="_blank"><i class="fa fa-facebook"></i></a>
+		<a href="https://twitter.com/kiipfone" target="_blank"><i class="fa fa-twitter"></i></a>
+		<a href="https://instagram.com/kiipfone" target="_blank"><i class="fa fa-instagram"></i></a>
+		<a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
 	</div>
 	<p class="copyright">Copyright 2015 kiipfone Inc.</p>
 </footer>
