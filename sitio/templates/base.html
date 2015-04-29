@@ -6,8 +6,6 @@
 	<meta charset="utf-8">
 	<title>kiipfone</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="{% static "style/normalize.css" %}">
-	<link rel="stylesheet" type="text/css" href="{% static "style/style.css" %}">
 	<link rel="icon" href="{% static "img/favicon.ico" %}">
 	<link rel="apple-touch-icon-precomposed" href="{% static "img/favicon.ico" %}">
 
@@ -16,7 +14,6 @@
 		<![endif]-->
 	{% block css %}
 	{% endblock %}
-	<link rel="stylesheet" href="{% static "style/font-awesome.min.css" %}">
 
 </head>
 <body>
@@ -95,3 +92,6 @@
 </script>
 </body>
 </html>
+<link rel="stylesheet" type="text/css" href="{% static "style/normalize.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "style/style.css" %}">
+<link rel="stylesheet" href="{% static "style/font-awesome.min.css" %}">
