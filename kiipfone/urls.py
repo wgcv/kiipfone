@@ -7,6 +7,6 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls'STATIC_URL = "/static/"
     url(r'^', include('sitio.urls')),
     url(r'^', include('usuario.urls')),
-
+    url(r'^', include('solicitar.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
