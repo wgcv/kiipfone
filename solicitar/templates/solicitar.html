@@ -1,33 +1,16 @@
-{% extends "base.html" %}
+{% extends "baseSinSolicitar.html" %}
 {% load staticfiles %}
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="{% static "style/contactanos.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "style/solicitar.css" %}">
 
 {% endblock %}
 {% block content %}
-<div class="columnas">
-<h1>Contáctanos</h1>
-<p class="encabezado">Estamos disponibles de Lunes a Sábados de 09h00 - 18h00</p>
-<div class="contactanos">
-<h2>Llámanos</h2>
-<p><a href="tel:+593995390452">+593-995390452</a></p>
-<p><a href="tel:+593992517433">+593-992517433</a></p>
-</div>
-<div class="contactanos">
-<h2>Mail</h2>
-<h3>Atención al cliente</h3>
-<p><a href="mailto:kiipfone@gmail.com?Subject=Soporte">kiipfone@gmail.com</a></p>
-<h3>Ventas y Marketing</h3>
-<p><a href="mailto:joshua.nrqz@gmail.com?Subject=Ventas">joshua.nrqz@gmail.com</a></p>
-<h3>Area de Desarrollo</h3>
-<p><a href="mailto:wgcv@wgcv.me?Subject=Desarrollo">wgcv@wgcv.me</a></p>
-</div>
-<div class="contactanos">
-<h2>Ubicación</h2>
-<h3>Kiipfone</h3>
-<p>Barrio del Centenario</p>
-<p>Guayaquil, EC 090102</p>
-
+<div class="solicitar">
+<h1>Seleccione la marca del dispositivo</h1>
+<div class="marcas">
+	<a href="#"><img src="http://lorempixel.com/g/300/200/"></a>
+	<a href="#"><img src="http://lorempixel.com/g/300/200/"></a>
+	<a href="#"><img src="http://lorempixel.com/g/300/200/"></a>
 </div>
 </div>
 {% endblock %}
