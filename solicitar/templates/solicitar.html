@@ -8,9 +8,12 @@
 <div class="solicitar">
 <h1>Seleccione la marca del dispositivo</h1>
 <div class="marcas">
-	<a href="#"><img src="http://lorempixel.com/g/300/200/"></a>
-	<a href="#"><img src="http://lorempixel.com/g/300/200/"></a>
-	<a href="#"><img src="http://lorempixel.com/g/300/200/"></a>
+	{% for marca in marcas %}
+
+	<a href="{{marca.url}}"><img src="{{MEDIA_URL}}{{marca.imagen}}" alt="{{marca.nombre}}"></a> 
+
+	{% endfor %}
+
 </div>
 </div>
 {% endblock %}

@@ -1,6 +1,7 @@
 nginx.conf
 kiipfone.sock
-kiipfone/settings.py
+settings.py
+settings.pyc
 db.sqlite3
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,0 +1,19 @@
+{% extends "baseSinSolicitar.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static "style/solicitar.css" %}">
+
+{% endblock %}
+{% block content %}
+<div class="solicitar">
+<h1>Seleccione el daño de dispositivo</h1>
+<div class="marcas">
+	{% for reparacion in reparaciones %}
+
+	<a class="reparacion" href="{{reparacion.url}}">{{reparacion.nombre}}</a> 
+
+	{% endfor %}
+
+</div>
+</div>
+{% endblock %}

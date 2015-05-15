@@ -24,10 +24,13 @@ a
 	color: #0388a6
 	line-height: 17pt
 	font: inherit
+section.separador
+	margin: 65px 0;
 nav
 	z-index: 10
 	background-color #121b21;
 	position fixed
+	top 0
 	color #fff
 	font-family "serifa-bt-bold"
 	font-size 1em
@@ -61,7 +64,7 @@ nav
 header
 	background-color #00afc4
 	padding-top 65px
-	height 100%
+	height: 100vh
 	text-align center
 	margin 0
 	h1
@@ -95,7 +98,8 @@ header
 		vertical-align middle
 		transition: width 2s linear 1s;
 
-	
+section.inicial
+	padding: 1em 0
 section.marcas
 	background-color #edf3f3
 	width 100%
@@ -161,8 +165,9 @@ footer
 	background #edf3f3 url("../img/footer.gif") top repeat-x;
 	clear: both
 	width 100%
-	position absolute
+	position relative
 	text-align center
+	bottom: 0
 	ul
 		width auto
 		font-family "serifa-bt-bold"
@@ -187,7 +192,7 @@ footer
 		line-height: 10pt
 		color: #121b21
 		opacity: 0.3
-		margin-bottom 2em
+		margin-bottom 0
 	p
 		text-align center
 		width: auto
