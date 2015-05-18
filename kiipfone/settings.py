@@ -119,3 +119,12 @@ MEDIA_URL = '/media/'
 TEMPLATE_DIRS = ( os.path.join(BASE_DIR, 'templates'), BASE_DIR,)
 LOGIN_URL = '/ingresar'
 LOGIN_REDIRECT_URL = "/"
+
+
+#Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'kiipfone@gmail.com'
+EMAIL_HOST_PASSWORD = 'k!!pf0ne'
+EMAIL_PORT = 587

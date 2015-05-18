@@ -6,15 +6,16 @@
 {% endblock %}
 {% block content %}
   
-        <form method="post" action="{% url 'ingresar' %}">
+        <form method="post" action="" enctype="multipart/form-data">
             {% csrf_token %}
 
  <div class="ingresar">
  <p>Usuario: </p>{{ form.username }}
   <p>Contraseña: </p>{{ form.password }}
     {% if form.errors %}
-        <p> Tu usuario y clave no son correctos, por favor intentelo de nuevo. Si deseas <a href="{% url 'registrarse' %}">registrate aquí </a></p>
+        <p> Tu usuario y clave no son correctos, por favor intentelo de nuevo.</p>
     {% endif %}
+      <p>Si deseas <a href="{% url 'registrarse' %}?next={{ request.GET.next }}">registrate aquí </a></p>
        <p> <input type="submit" class="boton" value="Ingresar"/> <input type="hidden" name="next"
                                                     value="{{ next }}"/></p>
  </div>
