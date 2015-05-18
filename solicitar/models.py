@@ -19,7 +19,7 @@ class Modelo(models.Model):
 	nombre = models.CharField(max_length=50)
 	url = models.CharField(max_length=50, unique=True)
 	descripcion = models.CharField(max_length=150)
-	imagen = models.ImageField(upload_to='marcas', blank=False,null=False)
+	imagen = models.ImageField(upload_to='modelos', blank=False,null=False)
 	color = models.ManyToManyField(Color, blank=True)
 	marca = models.ForeignKey(Marca)
 	def __str__(self):
