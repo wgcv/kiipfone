@@ -5,6 +5,7 @@ from django.db import models
 class Marca(models.Model):
 	nombre = models.CharField(max_length=50)
 	url = models.CharField(max_length=50, unique=True)
+	orden = models.IntegerField(default=1)
 	imagen = models.ImageField(upload_to='marcas', blank=False,null=False)
 	def __str__(self):
 		return self.nombre
@@ -18,6 +19,7 @@ class Color(models.Model):
 class Modelo(models.Model):
 	nombre = models.CharField(max_length=50)
 	url = models.CharField(max_length=50, unique=True)
+	orden = models.IntegerField(default=1)
 	descripcion = models.CharField(max_length=150)
 	imagen = models.ImageField(upload_to='modelos', blank=False,null=False)
 	color = models.ManyToManyField(Color, blank=True)
@@ -28,6 +30,7 @@ class Modelo(models.Model):
 class Reparacion(models.Model):
 	nombre = models.CharField(max_length=50)
 	url = models.CharField(max_length=50, unique=True)
+	orden = models.IntegerField(default=1)
 	descripcion = models.CharField(max_length=800, blank=True)
 	costo = models.DecimalField (max_digits=7, decimal_places=2)
 	modelo = models.ForeignKey(Modelo)
