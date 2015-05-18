@@ -17,8 +17,9 @@ def registro(request):
 			usuario.save()
 			user = authenticate(username=request.POST['username'], password=request.POST['password1'])
 			login(request, user)
-
-		return HttpResponseRedirect(request.GET['next'])
-			
+		if request.GET.get('next'):
+			return HttpResponseRedirect(request.GET['next'])
+		else:
+			return HttpResponseRedirect('/')
 	else:
 		return render(request, 'registrarse.html', dict(RegistrarUser=RegistrarUser(), RegistrarseUsuario=RegistrarseUsuario()))

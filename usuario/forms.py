@@ -14,6 +14,15 @@ class RegistrarUser(UserCreationForm):
 		max_length=150,
 		label = 'E-mail'
 	)
+	first_name = forms.CharField(
+		max_length=30,
+		label = 'Nombre'
+	)
+	last_name = forms.CharField(
+		max_length=30,
+		label = 'Apellido'
+	)
+
 	def __init__(self, *args, **kwargs):
 		super(RegistrarUser, self).__init__(*args, **kwargs)
 		self.fields['password1'].label = 'Contraseña'
@@ -21,7 +30,7 @@ class RegistrarUser(UserCreationForm):
 		self.fields['password2'].label = 'Repite contraseña'
 	class Meta:
 			model = User
-			fields = ('username','email')
+			fields = ('first_name','last_name','username','email')
 
 
 class RegistrarseUsuario(forms.ModelForm):

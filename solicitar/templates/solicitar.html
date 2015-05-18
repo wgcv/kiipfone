@@ -1,19 +1,51 @@
-{% extends "baseSinSolicitar.html" %}
-{% load staticfiles %}
-{% block css %}
-    <link rel="stylesheet" type="text/css" href="{% static "style/solicitar.css" %}">
-
-{% endblock %}
-{% block content %}
+{% extends "baseSinSolicitar.html" %} {% load staticfiles %} {% block css %}
+<link rel="stylesheet" type="text/css" href="{% static "style/solicitar.css" %}"> {% endblock %} {% block content %}
 <div class="solicitar">
-<h1>Seleccione la marca del dispositivo</h1>
-<div class="marcas">
-	{% for marca in marcas %}
+    <h1>Solicitar</h1>
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="marcas">
+            <div>Marca: {{modelo.marca}}</div>
+            <div>Modelo: {{modelo.nombre}}</div>
+            <div>Reparación: {{reparacion.nombre}}</div>
+			<div>Valor: ${{reparacion.costo}}</div>
 
-	<a href="{{marca.url}}"><img src="{{MEDIA_URL}}{{marca.imagen}}" alt="{{marca.nombre}}"></a> 
-
-	{% endfor %}
-
-</div>
+            {% if colores %}
+            <br>
+            <div>Seleccione el color:</div>
+            <div>{% for color in colores %}
+                <a title="{{color.nombre}}">
+                    <div style="
+					height: 1em;
+					width: 1em;
+					background: {{color.codigo}};
+					border: 1px solid #000;">
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div>Dirección:
+                <input type="text" name="direccion">
+            </div>
+            <div>País:
+                <select>
+                    <option value="ecuador">Ecuador</option>
+                </select>
+            </div>
+            <div>Ciudad:
+                <select>
+                    <option value="guayaquil">Guayaquil</option>
+                </select>
+            </div>
+            <div>Teléfono de contacto:
+                <input type="text" name="telefono">
+            </div>
+            <div>Observaciones:
+                <textarea rows="4" cols="50" name="observaciones">
+				</textarea>
+            </div>
+        </div>
+    </form>
 </div>
 {% endblock %}

@@ -1,0 +1,19 @@
+{% extends "baseSinSolicitar.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static "style/solicitar.css" %}">
+
+{% endblock %}
+{% block content %}
+<div class="solicitar">
+<h1>Seleccione la marca del dispositivo</h1>
+<div class="marcas">
+	{% for marca in marcas %}
+
+	<a href="{{marca.url}}"><img src="{{MEDIA_URL}}{{marca.imagen}}" alt="{{marca.nombre}}"></a> 
+
+	{% endfor %}
+
+</div>
+</div>
+{% endblock %}

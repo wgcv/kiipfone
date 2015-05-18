@@ -6,7 +6,7 @@ from solicitar.models import *
 # Create your views here.
 def marca(request):
 	marcas = Marca.objects.all().order_by('orden')
-	return render(request, 'solicitar.html' , {"marcas" : marcas})
+	return render(request, 'marcas.html' , {"marcas" : marcas})
 def modelo(request, marca):
 	modelo = Modelo.objects.filter(marca=Marca.objects.get(url=marca)).order_by('orden')
 	return render(request, 'modelos.html' , {"modelos" : modelo})
@@ -15,6 +15,8 @@ def reparacion(request,marca, modelo):
 	return render(request, 'reparacion.html' , {"reparaciones" : reparacion})
 @login_required()
 def solicitar(request,marca, modelo,reparacion):
-	send_mail('Reparacion', '', 'kiipfone@gmail.com', ['gstavocevallos@gmail.com'], html_message='Marca: %s<br>Modelo: %s<br>Reparacion: %s' %(marca,modelo,reparacion))
-	marcas = Marca.objects.all().order_by('orden')
-	return render(request, 'solicitar.html' , {"marcas" : marcas})
+	#send_mail('Reparacion', '', 'kiipfone@gmail.com', ['kiipfone@gmail.com'], html_message='Marca: %s<br>Modelo: %s<br>Reparacion: %s' %(marca,modelo,reparacion))
+	modelo = Modelo.objects.get(url=modelo)
+	reparacion = Reparacion.objects.get(url=reparacion)
+	color = modelo.color.all()
+	return render(request, 'solicitar.html' , {"modelo":modelo,"reparacion":reparacion,"colores" : color})
