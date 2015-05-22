@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&z!n@juyy(phenyc_w(*hyzxk3sr2)rmb1%-y--oysu9!cvqvn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['kiipfone.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -124,7 +124,7 @@ LOGIN_REDIRECT_URL = "/"
 #Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = '74.125.22.108'
 EMAIL_HOST_USER = 'kiipfone@gmail.com'
 EMAIL_HOST_PASSWORD = 'k!!pf0ne'
 EMAIL_PORT = 587
