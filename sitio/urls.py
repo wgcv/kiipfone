@@ -8,4 +8,5 @@ urlpatterns = (
 	url(r'^base/', 'sitio.views.base', name='base'),
 	url(r'^nosotros/', 'sitio.views.nosotros', name='nosotros'),
 	url(r'^contactanos/', 'sitio.views.contactanos', name='contactanos'),
+	url(r'^accesorios/', 'sitio.views.accesorios', name='accesorios'),
     )

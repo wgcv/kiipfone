@@ -7,5 +7,7 @@ def nosotros(request):
     return render(request, 'nosotros.html' )
 def contactanos(request):
     return render(request, 'contactanos.html' )
+def accesorios(request):
+    return render(request, 'proximamente.html' )
 def base(request):
     return render(request, 'base.html' )
