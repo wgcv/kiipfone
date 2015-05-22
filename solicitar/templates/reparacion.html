@@ -10,7 +10,7 @@
 <div class="marcas">
 	{% for reparacion in reparaciones %}
 
-	<a class="reparacion" href="{{reparacion.url}}">{{reparacion.nombre}}</a> 
+	<a class="reparacion" href="{{reparacion.url}}" title="${{reparacion.costo}}">{{reparacion.nombre}}</a> 
 
 	{% endfor %}
 

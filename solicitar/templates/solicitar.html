@@ -5,11 +5,11 @@
     <form method="post" action="" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="marcas">
+            <div><img class="previewsolicitar" src="{{MEDIA_URL}}{{modelo.imagen}}" alt="{{modelo.nombre}}"></div>
             <div>Marca: {{modelo.marca}}</div>
             <div>Modelo: {{modelo.nombre}}</div>
             <div>Reparación: {{reparacion.nombre}}</div>
-			<div>Valor: ${{reparacion.costo}}</div>
-
+            <div>Valor: ${{reparacion.costo}}</div>
             {% if colores %}
             <br>
             <div>Seleccione el color:</div>
@@ -29,21 +29,25 @@
                 <input type="text" name="direccion">
             </div>
             <div>País:
-                <select>
-                    <option value="ecuador">Ecuador</option>
+                <select  name="pais">
+                    <option value="Ecuador">Ecuador</option>
                 </select>
             </div>
             <div>Ciudad:
-                <select>
-                    <option value="guayaquil">Guayaquil</option>
+                <select  name="ciudad">
+                    <option value="Guayaquil">Guayaquil</option>
                 </select>
             </div>
             <div>Teléfono de contacto:
                 <input type="text" name="telefono">
             </div>
             <div>Observaciones:
-                <textarea rows="4" cols="50" name="observaciones">
-				</textarea>
+                <textarea rows="4" cols="50" name="observaciones"></textarea>
+            </div>
+            <div>
+                <input type="submit" class="boton" value="Solicitar">
+                <input type="hidden" name="next" value="{{ next }}" />
+                </p>
             </div>
         </div>
     </form>
